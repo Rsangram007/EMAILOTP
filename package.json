@@ -1,0 +1,31 @@
+{
+  "name": "emailotp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rsangram007/EMAILOTP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rsangram007/EMAILOTP/issues"
+  },
+  "homepage": "https://github.com/Rsangram007/EMAILOTP#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.1.1",
+    "nodemailer": "^6.9.2",
+    "nodemon": "^2.0.22",
+    "otp-generator": "^4.0.1",
+    "validator": "^13.9.0"
+  }
+}
