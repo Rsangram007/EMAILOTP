@@ -4,13 +4,13 @@ const nodemailer = require("nodemailer");
 
 // email config
 const tarnsporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.ethereal.email",
+  port: 587,
   auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASSWORD,
+    user: "polly.collins96@ethereal.email",
+    pass: "eceYtFNyKZGtQEmWsb",
   },
 });
-
 exports.userregister = async (req, res) => {
   const { fname, email, password } = req.body;
 
@@ -79,7 +79,9 @@ exports.userOtpSend = async (req, res) => {
             res.status(400).json({ error: "email not send" });
           } else {
             console.log("Email sent", info.response);
-            res.status(200).json({ message: "Email sent Successfully" });
+            res
+              .status(200)
+              .json({ message: "Email sent Successfully", data: info });
           }
         });
       } else {
@@ -101,8 +103,8 @@ exports.userOtpSend = async (req, res) => {
             console.log("error", error);
             res.status(400).json({ error: "email not send" });
           } else {
-            console.log("Email sent", info.response);
-            res.status(200).json({ message: "Email sent Successfully" });
+          //  console.log("Email sent", info.response);
+            res.status(200).json({ message: "Email sent Successfully", "data": info});
           }
         });
       }
