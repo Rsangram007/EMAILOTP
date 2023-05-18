@@ -24,7 +24,9 @@ mongoose
   .catch((error) => {
     console.error("Error connecting to MongoDB:", error);
   });
-
+app.get("/test", (req, res) => {
+    res.send ("Deployment sussfully")
+})
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
